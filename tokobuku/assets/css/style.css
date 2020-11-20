@@ -1,0 +1,319 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #f4eeff;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+header .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3rem 5rem;
+  background-color: white;
+  -webkit-box-shadow: 0 1rem 2.5rem rgba(66, 72, 116, 0.3);
+          box-shadow: 0 1rem 2.5rem rgba(66, 72, 116, 0.3);
+}
+
+header .header .left a {
+  margin-right: 1rem;
+}
+
+header .header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header .header .right a {
+  margin-left: 1rem;
+}
+
+header .header .right .img {
+  height: 4rem;
+  width: 4rem;
+  margin-left: 1rem;
+  background-color: #424874;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+header .header .right .img img {
+  height: 4.2rem;
+}
+
+header .header a {
+  display: inline-block;
+  font-size: 2rem;
+  text-decoration: none;
+  background-color: #424874;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  font-weight: bold;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+header .header a:hover {
+  -webkit-box-shadow: 0 1rem 2.5rem rgba(66, 72, 116, 0.2);
+          box-shadow: 0 1rem 2.5rem rgba(66, 72, 116, 0.2);
+  z-index: 3;
+}
+
+main .main {
+  margin: 5rem 10rem;
+}
+
+main .main .semua, main .main .fiksi, main .main .nonfiksi, main .main .pelajaran {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(27rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+  grid-auto-rows: 64rem;
+  justify-items: center;
+}
+
+main .main .semua .card, main .main .fiksi .card, main .main .nonfiksi .card, main .main .pelajaran .card {
+  width: 25rem;
+  height: 60rem;
+  border-radius: 3rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0 1rem 2.5rem rgba(66, 72, 116, 0.1);
+          box-shadow: 0 1rem 2.5rem rgba(66, 72, 116, 0.1);
+  background-color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+  display: -ms-grid;
+  display: grid;
+  grid-template: "gambar gambar gambar" 35rem ". teks ." 19rem "beli beli beli" 6rem / 2rem 21rem 2rem;
+}
+
+main .main .semua .card .gambar, main .main .fiksi .card .gambar, main .main .nonfiksi .card .gambar, main .main .pelajaran .card .gambar {
+  grid-area: gambar;
+  background-color: lightgrey;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+main .main .semua .card .gambar img, main .main .fiksi .card .gambar img, main .main .nonfiksi .card .gambar img, main .main .pelajaran .card .gambar img {
+  width: 25rem;
+}
+
+main .main .semua .card .teks, main .main .fiksi .card .teks, main .main .nonfiksi .card .teks, main .main .pelajaran .card .teks {
+  grid-area: teks;
+  display: -ms-grid;
+  display: grid;
+  grid-template: "." 1.5rem "kode" 2rem "judul" 11rem "harga" 4.5rem;
+}
+
+main .main .semua .card .teks h5, main .main .fiksi .card .teks h5, main .main .nonfiksi .card .teks h5, main .main .pelajaran .card .teks h5 {
+  grid-area: kode;
+  font-size: 1.2rem;
+  display: inline-block;
+  border-bottom: 1px solid #000;
+}
+
+main .main .semua .card .teks .judul, main .main .fiksi .card .teks .judul, main .main .nonfiksi .card .teks .judul, main .main .pelajaran .card .teks .judul {
+  grid-area: judul;
+  margin-top: 2rem;
+}
+
+main .main .semua .card .teks .judul h3, main .main .fiksi .card .teks .judul h3, main .main .nonfiksi .card .teks .judul h3, main .main .pelajaran .card .teks .judul h3 {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: .5rem;
+}
+
+main .main .semua .card .teks .judul p, main .main .fiksi .card .teks .judul p, main .main .nonfiksi .card .teks .judul p, main .main .pelajaran .card .teks .judul p {
+  font-size: 1.5rem;
+}
+
+main .main .semua .card .teks h4, main .main .fiksi .card .teks h4, main .main .nonfiksi .card .teks h4, main .main .pelajaran .card .teks h4 {
+  grid-area: harga;
+  font-size: 1.8rem;
+}
+
+main .main .semua .card a, main .main .fiksi .card a, main .main .nonfiksi .card a, main .main .pelajaran .card a {
+  grid-area: beli;
+  background-color: #424874;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 3rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main .main .semua .card a:hover, main .main .fiksi .card a:hover, main .main .nonfiksi .card a:hover, main .main .pelajaran .card a:hover {
+  background-color: rgba(66, 72, 116, 0.9);
+}
+
+main .main .semua .card:hover, main .main .fiksi .card:hover, main .main .nonfiksi .card:hover, main .main .pelajaran .card:hover {
+  -webkit-box-shadow: 0 1rem 3rem 1rem rgba(66, 72, 116, 0.2);
+          box-shadow: 0 1rem 3rem 1rem rgba(66, 72, 116, 0.2);
+  z-index: 1;
+}
+
+main .main .masuk, main .main .daftar, main .main .edit-user, main .main .edit-buku, main .main .tambah-user, main .main .tambah-buku, main .main .userlist, main .main .administrator, main .main .keranjang {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main .main .masuk .card, main .main .daftar .card, main .main .edit-user .card, main .main .edit-buku .card, main .main .tambah-user .card, main .main .tambah-buku .card, main .main .userlist .card, main .main .administrator .card, main .main .keranjang .card {
+  -webkit-box-shadow: 0 1rem 2.5rem rgba(66, 72, 116, 0.1);
+          box-shadow: 0 1rem 2.5rem rgba(66, 72, 116, 0.1);
+  background-color: #fff;
+  border-radius: 5rem;
+  padding: 4rem;
+  width: 100%;
+  text-align: center;
+}
+
+main .main .masuk .card h2, main .main .daftar .card h2, main .main .edit-user .card h2, main .main .edit-buku .card h2, main .main .tambah-user .card h2, main .main .tambah-buku .card h2, main .main .userlist .card h2, main .main .administrator .card h2, main .main .keranjang .card h2 {
+  font-size: 3rem;
+}
+
+main .main .masuk .card form, main .main .daftar .card form, main .main .edit-user .card form, main .main .edit-buku .card form, main .main .tambah-user .card form, main .main .tambah-buku .card form, main .main .userlist .card form, main .main .administrator .card form, main .main .keranjang .card form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .main .masuk .card form input, main .main .daftar .card form input, main .main .edit-user .card form input, main .main .edit-buku .card form input, main .main .tambah-user .card form input, main .main .tambah-buku .card form input, main .main .userlist .card form input, main .main .administrator .card form input, main .main .keranjang .card form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #f9f9f9;
+  padding: 1rem 2.5rem;
+  font-size: 2rem;
+  border-radius: 3rem;
+  margin-top: 1rem;
+}
+
+main .main .masuk .card form input:last-child, main .main .daftar .card form input:last-child, main .main .edit-user .card form input:last-child, main .main .edit-buku .card form input:last-child, main .main .tambah-user .card form input:last-child, main .main .tambah-buku .card form input:last-child, main .main .userlist .card form input:last-child, main .main .administrator .card form input:last-child, main .main .keranjang .card form input:last-child {
+  background-color: #424874;
+  color: #fff;
+  font-weight: bold;
+}
+
+main .main .masuk .card table, main .main .daftar .card table, main .main .edit-user .card table, main .main .edit-buku .card table, main .main .tambah-user .card table, main .main .tambah-buku .card table, main .main .userlist .card table, main .main .administrator .card table, main .main .keranjang .card table {
+  width: 100%;
+  font-size: 2rem;
+}
+
+main .main .masuk .card table .total, main .main .daftar .card table .total, main .main .edit-user .card table .total, main .main .edit-buku .card table .total, main .main .tambah-user .card table .total, main .main .tambah-buku .card table .total, main .main .userlist .card table .total, main .main .administrator .card table .total, main .main .keranjang .card table .total {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+main .main .masuk .card table th, main .main .daftar .card table th, main .main .edit-user .card table th, main .main .edit-buku .card table th, main .main .tambah-user .card table th, main .main .tambah-buku .card table th, main .main .userlist .card table th, main .main .administrator .card table th, main .main .keranjang .card table th {
+  background-color: #424874;
+  color: white;
+  padding: 2rem;
+}
+
+main .main .masuk .card table th:first-child, main .main .daftar .card table th:first-child, main .main .edit-user .card table th:first-child, main .main .edit-buku .card table th:first-child, main .main .tambah-user .card table th:first-child, main .main .tambah-buku .card table th:first-child, main .main .userlist .card table th:first-child, main .main .administrator .card table th:first-child, main .main .keranjang .card table th:first-child {
+  border-top-left-radius: 3rem;
+}
+
+main .main .masuk .card table th:last-child, main .main .daftar .card table th:last-child, main .main .edit-user .card table th:last-child, main .main .edit-buku .card table th:last-child, main .main .tambah-user .card table th:last-child, main .main .tambah-buku .card table th:last-child, main .main .userlist .card table th:last-child, main .main .administrator .card table th:last-child, main .main .keranjang .card table th:last-child {
+  border-top-right-radius: 3rem;
+}
+
+main .main .masuk .card table td, main .main .daftar .card table td, main .main .edit-user .card table td, main .main .edit-buku .card table td, main .main .tambah-user .card table td, main .main .tambah-buku .card table td, main .main .userlist .card table td, main .main .administrator .card table td, main .main .keranjang .card table td {
+  border: 1px solid lightgrey;
+  padding: 1rem;
+}
+
+main .main .masuk .card table td a, main .main .daftar .card table td a, main .main .edit-user .card table td a, main .main .edit-buku .card table td a, main .main .tambah-user .card table td a, main .main .tambah-buku .card table td a, main .main .userlist .card table td a, main .main .administrator .card table td a, main .main .keranjang .card table td a {
+  color: navy;
+  text-decoration: none;
+}
+
+main .main .masuk .card table td div, main .main .daftar .card table td div, main .main .edit-user .card table td div, main .main .edit-buku .card table td div, main .main .tambah-user .card table td div, main .main .tambah-buku .card table td div, main .main .userlist .card table td div, main .main .administrator .card table td div, main .main .keranjang .card table td div {
+  height: 4rem;
+  width: 4rem;
+  margin-left: 1rem;
+  background-color: #424874;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+main .main .masuk .card table td div img, main .main .daftar .card table td div img, main .main .edit-user .card table td div img, main .main .edit-buku .card table td div img, main .main .tambah-user .card table td div img, main .main .tambah-buku .card table td div img, main .main .userlist .card table td div img, main .main .administrator .card table td div img, main .main .keranjang .card table td div img {
+  height: 4.2rem;
+}
+
+main .main .masuk .card .tambah, main .main .masuk .card .checkout, main .main .daftar .card .tambah, main .main .daftar .card .checkout, main .main .edit-user .card .tambah, main .main .edit-user .card .checkout, main .main .edit-buku .card .tambah, main .main .edit-buku .card .checkout, main .main .tambah-user .card .tambah, main .main .tambah-user .card .checkout, main .main .tambah-buku .card .tambah, main .main .tambah-buku .card .checkout, main .main .userlist .card .tambah, main .main .userlist .card .checkout, main .main .administrator .card .tambah, main .main .administrator .card .checkout, main .main .keranjang .card .tambah, main .main .keranjang .card .checkout {
+  display: block;
+  width: 100%;
+  background-color: #424874;
+  color: white;
+  padding: 2rem;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0 0 3rem 3rem;
+}
+
+main .main .masuk .user th:first-child, main .main .daftar .user th:first-child, main .main .edit-user .user th:first-child, main .main .edit-buku .user th:first-child, main .main .tambah-user .user th:first-child, main .main .tambah-buku .user th:first-child, main .main .userlist .user th:first-child, main .main .administrator .user th:first-child, main .main .keranjang .user th:first-child {
+  width: 15rem;
+}
+
+main .main .masuk .user td:first-child, main .main .daftar .user td:first-child, main .main .edit-user .user td:first-child, main .main .edit-buku .user td:first-child, main .main .tambah-user .user td:first-child, main .main .tambah-buku .user td:first-child, main .main .userlist .user td:first-child, main .main .administrator .user td:first-child, main .main .keranjang .user td:first-child {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+/*# sourceMappingURL=style.css.map */
